@@ -13,7 +13,7 @@
 the PHP 7.4:
 
     ```yaml
-    version: '3'
+    version: '2'
 
     services:
 
@@ -21,7 +21,7 @@ the PHP 7.4:
             container_name: 'myproject.nginx'
 
             build: 
-            context: docker/service/nginx1.18.x
+                context: docker/service/nginx1.18.x
 
             args:
                 php_container: 'myproject.php'
@@ -34,11 +34,14 @@ the PHP 7.4:
             links:
                 - php
 
+            volumes_from:
+                - php    
+
         php:
             container_name: 'myproject.php'
 
             build: 
-            context: docker/service/php7.4-fpm
+                context: docker/service/php7.4-fpm
 
             args:
                 timezone: 'Europe/Madrid' # or you preferred timezone
