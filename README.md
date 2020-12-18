@@ -55,3 +55,15 @@ the PHP 7.4:
     ```sh
     docker-compose up
     ```
+
+## FAQ
+
+### How to update to lastest commit?
+
+Easy. You only need the get latest commit from master branch:
+
+```sh
+cd docker && git pull
+```
+
+*Note: keep in mind that you must use the directory where you stored the submodule*
