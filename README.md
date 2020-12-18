@@ -44,7 +44,7 @@ the PHP 7.4:
                 timezone: 'Europe/Madrid' # or you preferred timezone
 
             volumes:
-            - .:/var/www/application 
+                - .:/var/www/application 
     ```
 
 3. Ready to play:
