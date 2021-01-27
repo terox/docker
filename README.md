@@ -23,9 +23,9 @@ the PHP 7.4:
             build: 
                 context: docker/service/nginx1.18.x
 
-            args:
-                php_container: 'myproject.php'
-                preset: 'symfony4.conf'
+                args:
+                    php_container: 'myproject.php'
+                    preset: 'symfony4.conf'
 
 
             ports:
@@ -43,8 +43,8 @@ the PHP 7.4:
             build: 
                 context: docker/service/php7.4-fpm
 
-            args:
-                timezone: 'Europe/Madrid' # or you preferred timezone
+                args:
+                    timezone: 'Europe/Madrid' # or you preferred timezone
 
             volumes:
                 - .:/var/www/application 
