@@ -59,7 +59,7 @@ RUN docker-php-ext-install \
     exif
 
 # PHP Extends from PECL
-RUN yes | pecl install xdebug-2.9.8
+RUN yes | pecl install xdebug-3.0.4
 RUN docker-php-ext-enable xdebug
 
 RUN pecl install redis-5.3.1
@@ -73,6 +73,7 @@ RUN docker-php-ext-enable msgpack
 
 # Copy configuration files
 COPY app.php.ini /usr/local/etc/php/conf.d/application.ini
+COPY xdebug.php.ini /usr/local/etc/php/conf.d/xdebug.ini
 COPY app.pool.conf /usr/local/etc/php-fpm.d/application.pool.conf
 
 # Tweaks datetime (docker containers are in UTC)
