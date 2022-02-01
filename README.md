@@ -58,9 +58,9 @@ the PHP 7.4:
 
 ## FAQ
 
-### How to update to lastest commit?
+### How to update to the latest commit?
 
-Easy. You only need the get latest commit from master branch:
+Easy. You only need the get the latest commit from master branch:
 
 ```sh
 cd docker && git pull
