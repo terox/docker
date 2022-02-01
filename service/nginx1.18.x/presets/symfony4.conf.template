@@ -1,7 +1,7 @@
 server {
-    server_name example.tld www.example.tld;
+    server_name ${DOMAINS};
 
-    root /var/www/application/public;
+    root /var/www/application/${PUBLIC_PATH};
 
     error_log /var/log/nginx/symfony4.error.log;
     access_log /var/log/nginx/symfony4.access.log;
