@@ -17,8 +17,8 @@ the PHP 7.4:
 
     services:
 
-        nginx:
-            container_name: 'myproject.nginx'
+        nginx1:
+            container_name: 'myproject.nginx1'
 
             build: 
                 context: docker/service/nginx1.18.x
@@ -26,7 +26,20 @@ the PHP 7.4:
                 args:
                     php_container: 'myproject.php'
                     preset: 'symfony4.conf'
+                    domains: www1.example.com
+                    public_path: public
 
+        nginx2:
+            container_name: 'myproject.nginx2'
+
+            build: 
+                context: docker/service/nginx1.18.x
+
+                args:
+                    php_container: 'myproject.php'
+                    preset: 'symfony4.conf'
+                    domains: www2.example.com
+                    public_path: apps/api/public
 
             ports:
                 - 8089:80
