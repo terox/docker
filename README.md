@@ -8,6 +8,7 @@
     ```sh
     git submodule add https://www.github.com/terox/docker docker
     ```
+    ***Note**: don't forget add ```docker/``` to your ```.gitignore```*
 
 2. Create a ```docker-compose.yml``` in your project root and add the services that you want use, for example
 the PHP 7.4:
